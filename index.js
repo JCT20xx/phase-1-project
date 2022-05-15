@@ -1,29 +1,51 @@
-const site = 'https://api.jikan.moe/v4/anime'
+const site = 'https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0.'
 document.addEventListener('DOMContentLoaded', () => {
-    loadAnime()
+    loadPokemon()
 })
 
-let animes
+let pokemon
 
-function loadAnime(){
+function loadPokemon(){
+    const div = document.querySelector('div')
+    div.innerHTML = ''
     fetch(site)
     .then(resp => resp.json())
     .then(data => {
         console.log(data)
-        animes = data
-        listShows()
+        pokemon = data
+        listPokemon()
     })}
 
-function listShows(){
-    const ul = document.getElementById('show-listing')
-    animes.data.forEach(anime => {
+function listPokemon(){
+    const ul = document.getElementById('pokemon_list')
+    pokemon.results.forEach(mon => {
         const li = document.createElement('li')
         ul.appendChild(li)
         const a = document.createElement('a')
-        a.innerText = anime.title
-        a.id = anime.mal_id
+        a.innerText = mon.name
+        a.id = mon.url
+        a.className = 'monsters'
         a.href='#'
         li.appendChild(a)
     })
+    ul.addEventListener('click', whoseThatPokemon)
+}
+
+function whoseThatPokemon(e){
+    const pokemon = e.target.innerText
+    const ul = document.getElementById('pokemon_list')
+    ul.innerHTML = ''
+    fetch(e.target.id)
+    .then(resp => resp.json())
+    .then(data => console.log(data))
+    const div = document.querySelector('div')
+    
+    
+    
+    
+    const back = document.createElement('form')
+    back.innerHTML = '<form><input type="button" value="Main List"></form>'
+    div.appendChild(back)  
+    back.addEventListener('click', loadPokemon)
 }
 
