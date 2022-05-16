@@ -2,8 +2,7 @@ body {
     margin: 0%;
     background-color: rgb(204, 236, 227);
   }
- 
-  body > header {
+body > header {
     background-color: rgb(30, 57, 73);
     border-style: outset;
     border-width: thick;
@@ -13,17 +12,80 @@ body {
     padding: 0 20px 20px 20px;
     border: 5px solid white;
     
-}   
-body h1 {
+  }   
+h1#title {
     margin: 0;
     padding: 20px 0;
     color: #8092a1;
     text-shadow: 3px 3px 1px black;
     text-align:initial;
   }
-li{
-  font-size: larger;
+ol{
+  margin: auto;
+  padding-left:3.2%
 }
-  .hidden {
-    visibility: hidden;
+  li {
+  font-size: larger;
+  width: auto;
+  color:rgb(0, 0, 0);
+  margin: auto;
   }
+a {
+  font-size: larger;
+  color: blue;
+  text-align: center;
+  text-transform: capitalize;
+}
+#NAME {
+  color:rgb(8, 5, 5);
+  text-transform: capitalize;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 500%;
+  background-color: rgb(197, 213, 223);
+  border-style: outset;
+  border-width: thin;
+  text-shadow: #FFF;
+  width: auto;
+  margin: 0;
+  padding: 0 20px 20px 20px;
+  border: 5px solid rgb(5, 0, 0);
+  margin-top: 1%;
+}
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+#type{
+  list-style: none;
+  font-size: xx-large;
+  width: auto;
+  color:rgb(0, 0, 0);
+  margin: auto;
+  text-transform:uppercase;
+  float: left;
+}
+#hw{
+  list-style: none;
+  font-size: xx-large;
+  width: auto;
+  color:rgb(0, 0, 0);
+  margin: auto;
+  text-transform:uppercase;
+  float: right;
+}
+#moves{
+  display: table;
+  margin-top: 7%;
+
+}
+#move{
+  list-style: none;
+  font-size: larger;
+  text-transform: uppercase;
+  width: auto;
+  color: rgb(2, 37, 7);
+
+}
