@@ -1,20 +1,7 @@
-<<<<<<< HEAD
 # Phase 1 Project: The Complete Pokedex
 
 ## Description
-This is a simple project to create a front-end website from scratch
+This is a simple project to create a front-end website from scratch using HTML, CSS, and javascript coding to pull and display data from an API.
 
-
-=======
-Phase 1 Project. 
-Created a simple HTML. 
-Created a simple css. 
-Played around with the css. 
-Starting on the JavaScript. 
-Going to change to a differnt API as the one i chose seem disorganized for my purposes. 
-Changed to use a pokemon API and it is a much cleaner api to work with. 
-Added div to index.html to add in the pokemon info. 
-Added the event listener to clear the page and a back button to reload list. 
-Rearranged alot of the const for the tags but its working now. 
-there is a forEach to get the pokemons typing and a forEach to get all the moves. 
->>>>>>> ed47a48d83709b4672c8f3c428c779695efcc107
+## Usage
+This site pulls the names of 'pokemon' and lists them out and has an event listner to repond to being clicked on providing more information about the chosen 'pokemon'. The page will then empty out the previously loaded list and load with the name, pokedex #, an image of the pokemon, and some statistics about what type they are, height and weight, and a list of their attack moves. There is also a back button with an event listener to repond to the button being clicked and clearing out the page and bringing back up the list.
